@@ -6,9 +6,6 @@ on:
 jobs:
   install:
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        node-version: [14, 16, 18, 20]
 
     steps:
     - name: Git clone
