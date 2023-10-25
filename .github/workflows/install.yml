@@ -22,3 +22,19 @@ jobs:
           wait-on-timeout: 120
           browser: chrome
           spec: cypress/e2e/isolation/*
+      - name: "UI Tests - Firefox"
+        uses: cypress-io/github-action@v4
+        with:
+          start: npm start
+          wait-on: "http://localhost:8081"
+          wait-on-timeout: 120
+          browser: firefox
+          spec: cypress/e2e/isolation/*
+      - name: "UI Tests - Edge"
+        uses: cypress-io/github-action@v4
+        with:
+           start: npm start
+           wait-on: "http://localhost:8081"
+           wait-on-timeout: 120
+           browser: edge
+           spec: cypress/e2e/isolation/*
