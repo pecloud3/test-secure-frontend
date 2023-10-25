@@ -16,3 +16,5 @@ jobs:
         node-version: 16
     - name: Install dependencies
       run: npm install
+    - name: Run cypress tests
+      run: npx cypress run --spec "cypress/e2e/isolation/*" --browser chrome --headed
